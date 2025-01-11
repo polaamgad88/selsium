@@ -13,7 +13,7 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Bebas-Regular', sans-serif;
             line-height: 1.6;
         }
 
@@ -37,7 +37,7 @@
         }
 
         .section p {
-            font-size: 1.8vw;
+            font-size: 1.7vw;
             margin-top: 10px;
             color: #555;
         }
@@ -46,13 +46,126 @@
             flex-direction: row-reverse;
         }
 
-        .text-content {
-            flex: 1;
-            padding: 20px;
+        #section2 {
+            background-image: url(assets/Selsium/2/sh.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: bottom;
         }
 
-        .text-content h2 {
-            margin-bottom: 15px;
+        #section2 img {
+            max-width: 75%;
+            height: auto;
+            border-radius: 0;
+        }
+
+        #section4 img {
+            max-width: 60%;
+            height: auto;
+            border-radius: 0;
+            margin-bottom: 4vw;
+        }
+
+        .text-content-reg {
+            flex: 1;
+            margin-bottom: auto;
+            margin-left: -6vw;
+            font-family: 'Bebas-Regular', sans-serif;
+        }
+
+        .text-content-sec4 {
+            flex: 1;
+            margin-bottom: auto;
+            margin-left: -16vw;
+        }
+
+        .text-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            padding: 1.7vw;
+            border-radius: 0.7vw;
+            max-width: fit-content;
+            margin: auto;
+        }
+
+        .line1,
+        .line2,
+        .line3,
+        .line4,
+        .line5,
+        .line6 {
+            margin: -0.7vw 0;
+        }
+
+
+        .line1 {
+            font-family: 'Bebas-Regular', sans-serif;
+            font-size: 5vw;
+            font-weight: bolder;
+            text-transform: uppercase;
+        }
+
+        .line1 img {
+            width: 20vw;
+            height: auto;
+        }
+
+
+        .line2 {
+            font-family: 'Bebas-Regular', sans-serif;
+            font-size: 1.3vw;
+            width: 100%;
+            text-align: center;
+            font-weight: bolder;
+            color: #202a70;
+            text-transform: uppercase;
+        }
+
+        .line3 {
+            font-family: 'Bebas-Regular', monospace;
+            font-size: 3.1vw;
+            font-weight: 1000;
+            width: 100%;
+            text-align: center;
+            color: #2e9c5b;
+            text-transform: uppercase;
+        }
+
+        .line4 {
+            font-family: 'Bebas-Regular', sans-serif;
+            font-size: 6vw;
+            width: 100%;
+            color: #202a70;
+            font-stretch: ultra-expanded;
+            text-align: center;
+            text-transform: uppercase;
+            transform: scaleY(3.5);
+            padding: 4.5vw;
+            font-weight: bolder;
+        }
+
+        .line5 {
+            font-family: 'Bebas-Regular', sans-serif;
+            font-size: 1.3vw;
+            text-transform: uppercase;
+            color: #202a70;
+            font-weight: bolder;
+            margin: 0
+        }
+
+        .line6 {
+            font-family: 'Bebas-Regular', sans-serif;
+            font-size: 1vw;
+            background-color: #2e9c5b;
+            color: white;
+            padding: 0.3vw 0.6vw;
+            border-radius: 1vw;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
         }
 
         .image-content {
@@ -65,13 +178,6 @@
             height: auto;
         }
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            background-color: #333;
-            color: #fff;
-        }
-
         /* Navigation Bar Styles */
         nav {
             background-color: #fff;
@@ -80,7 +186,7 @@
             justify-content: space-between;
             padding: 10px 5%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            position: fixed;
+            position: sticky;
             top: 0;
             width: 100%;
             z-index: 1000;
@@ -92,15 +198,8 @@
         }
 
         .logo img {
-            width: 50px;
+            width: 14vw;
             height: auto;
-            margin-right: 10px;
-        }
-
-        .logo h1 {
-            font-size: 24px;
-            font-weight: bold;
-            color: #2c3e50;
         }
 
         .menu {
@@ -118,6 +217,57 @@
 
         .menu a:hover {
             color: #007bff;
+        }
+
+        #footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 1vw;
+            margin: 4vw;
+            margin-left: 10vw;
+            background-color: white;
+        }
+
+        #footer img {
+
+            width: 20vw;
+            height: auto;
+
+        }
+
+        #footer .left-column {
+            max-width: 46vw;
+            flex: 1;
+            font-size: 1.7vw;
+            font-weight: bold;
+            font-family: 'Bebas-Regular';
+            padding-right: 10vw;
+            color: #202a70;
+        }
+
+        #footer .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        #footer .social {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #footer .social img {
+            width: 24px;
+            height: 24px;
+        }
+
+        #footer .social span {
+            border-bottom: 1px solid #ccc;
+            flex: 1;
         }
 
         /* Responsive Menu for Small Screens */
@@ -140,8 +290,7 @@
     <nav>
         <!-- Logo Holder -->
         <div class="logo">
-            <img src="https://via.placeholder.com/50" alt="Logo">
-            <h1>Selsium</h1>
+            <img src="assets/Selsium/Selsium-01.png" alt="Logo">
         </div>
 
         <!-- Menu Items -->
@@ -149,56 +298,63 @@
             <a href="#section1">Home</a>
             <a href="#section2">About</a>
             <a href="#section3">Gallery</a>
-            <a href="#section4">Contact</a>
+            <a href="#section4">articles</a>
+            <a href="#footer">Contact</a>
         </div>
     </nav>
     <!-- Section 1: Image Right, Text Left -->
-    <section class="section text-left" style=" background: url(assets/Selsium/1/BG.png); background-size: cover;">
+    <section id="section1" class="section text-left"
+        style=" background: url(assets/Selsium/1/BG.png); background-size: cover;">
         <div class="image-content">
             <img src="assets/Selsium/1/pro.png" alt="Selsium Shampoo">
         </div>
-        <div class="text-content" style="justify-items: center;">
-            <h1>Selsium</h1>
-            <h2>ANTI - DANDRUFF</h2>
-            <h1>SHAMPOO</h1>
-            <h1 style="font-family: 'Bebas-Regular' ;font-size: 50px;">NO.1</h1>
-            <h1>Selenium sulfuide 1%</h1>
-            <h1>recommended by doctors</h1>
+        <div class="text-content">
+            <div class="line1"><img src="assets/Selsium/Selsium-01.png" alt="logo"></div>
+            <div class="line2">ANTI - DANDRUFF</div>
+            <div class="line3">SHAMPOO</div>
+            <div class="line4">N0.1</div>
+            <div class="line5">Selenium sulfuide 1%</div>
+            <div class="line6">recommended by doctors</div>
         </div>
 
     </section>
 
     <!-- Section 2: Image Left, Text Right -->
-    <section class="section"
-        style="background-image: url(assets/Selsium/2/sh.png);background-size: 100%; background-repeat: no-repeat;background-position: bottom;">
+    <section id="section2" class="section">
         <div class="image-content">
             <img src="assets/Selsium/2/mod.png" alt="Selenium Sulfide">
         </div>
-        <div class="text-content">
-            <h2>
+        <div class="text-content-reg">
+            <h2
+                style="color: #2e9c5b;font-size: 3.5vw; font-weight: bolder; padding-bottom: 3vw;">
                 why use selsium ?
             </h2>
-            <p>Treats dandruff and itchy scalp. - Contains selenium sulfide to fight fungi and treat scalp
-                inflammation. - Contains aloe vera to hydrate dry hair and repair damage</p>
+            <p>- Treats dandruff and itchy scalp. </p>
+            <p>- Contains selenium sulfide to fight fungi and treat scalp inflamation.</p>
+            <p>- inflammation. - Contains aloe vera to hydrate dry hair and repair damage</p>
         </div>
 
     </section>
 
     <!-- Section 3: Full-Width Image -->
-    <section class="section">
+    <section id="section3" class="section">
         <img src="assets/Selsium/3/pro & text.png" alt="Dandruff Causes" class="full-width-image">
     </section>
 
     <!-- Section 4: Image Left, Text Right -->
-    <section class="section" style="background-color: #202a70; place-content: center;">
-        <h1 style="color: white;margin: 20px 0px;">Understanding Dandruff: couses and solutions</h1>
+    <section id="section4" class="section" style="background-color: #202a70; place-content: center;">
+        <h1 style="color: white;margin: 20px 0px;margin-right: auto; font-size: 3vw;">1. Understanding Dandruff: couses
+            and solutions
+        </h1>
         <div style="display: flex; flex-direction: row; align-items: center;">
             <div class="image-content">
                 <img src="assets/Selsium/4/1.png" alt="Understanding Dandruff">
             </div>
-            <div class="text-content" style="text-align: justify;">
+            <div class="text-content-sec4" style="text-align: justify;">
 
-                <p style="color: #fff;">Dandruff is a common scalp condition that causes the shedding of dead skin cells from the scalp,
+                <p style="color: #fff;">Dandruff is a common scalp condition that causes the
+                    shedding of dead skin cells
+                    from the scalp,
                     often resulting in visible white or yellow flakes in your hair. It can be accompanied by itching and
                     irritation, making it an uncomfortable and sometimes embarrassing issue to deal with. Understanding
                     the causes of dandruff is the first step to finding the right solution for this condition.
@@ -210,9 +366,30 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>Selsium - An effective treatment for dandruff and itching. It cleanses, hydrates, and leaves hair soft.</p>
-        <p>&copy; 2025 Your Company. All rights reserved.</p>
+    <footer id="footer">
+        <div class="left-column">
+            <img src="assets/Selsium/Selsium-01.png" alt="">
+            <p>Selsium - An effective treatment for dandruff and itching.
+                It cleanses, hydrates, and leaves hair soft.</p>
+        </div>
+        <div class="right-column">
+            <div class="social">
+                <img src="location.png" alt="Facebook">
+                <span>this is location</span>
+            </div>
+            <div class="social">
+                <img src="phone.png" alt="Twitter">
+                <span>this is phone</span>
+            </div>
+            <div class="social">
+                <img src="mail.png" alt="Instagram">
+                <span>this is mail</span>
+            </div>
+            <div class="social">
+                <img src="facebook.png" alt="Facebook">
+                <span>this is facebook</span>
+            </div>
+        </div>
     </footer>
 </body>
 
