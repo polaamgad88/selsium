@@ -32,14 +32,17 @@
         }
 
         .section h2 {
-            font-size: 28px;
-            color: #2c3e50;
+            color: #2e9c5b;
+            font-size: 3.5vw;
+            font-weight: bolder;
+            padding-bottom: 3vw;
         }
 
         .section p {
             font-size: 1.7vw;
             margin-top: 10px;
-            color: #555;
+            color: #202a70;
+            font-weight: bold;
         }
 
         .section.text-left {
@@ -270,11 +273,157 @@
             flex: 1;
         }
 
+        #section1 {
+            background: url(assets/Selsium/1/BG.png);
+            background-size: cover;
+        }
+
+        #section4 div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        #section4 h1 {
+            color: white;
+            margin: 20px 0px;
+            margin-right: auto;
+            font-size: 3vw;
+        }
+
         /* Responsive Menu for Small Screens */
         @media (max-width: 768px) {
+            .section {
+                padding: 0px 5%;
+            }
+
             .menu {
                 display: none;
                 /* Hide menu on smaller screens */
+            }
+
+            .logo img {
+                width: 28vw;
+            }
+
+            #footer img {
+                width: 28vw;
+            }
+
+            #footer .left-column {
+                font-size: 3.7vw;
+                padding-right: 0;
+                margin-bottom: 3vw;
+            }
+
+            nav {
+                place-content: center;
+            }
+
+            #section1 {
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            #section1 img {
+                margin-left: -4vw;
+            }
+
+            .line1 img {
+                display: none;
+            }
+
+            #section2 .image-content {
+                text-align-last: center;
+            }
+
+            #section2 {
+                background-position: center;
+            }
+
+            .text-content-reg {
+                margin-left: 0;
+            }
+
+            footer {
+                flex-direction: column;
+
+            }
+
+            #footer {
+                margin-left: 0;
+                padding: 0;
+                margin: 4vw;
+            }
+
+            #footer .left-column {
+                max-width: max-content;
+            }
+
+            #section1,
+            #section2 {
+                flex-direction: column;
+            }
+
+            .section h2 {
+                font-size: 6vw;
+
+            }
+
+            #section4 p {
+                font-size: 3.5vw;
+            }
+
+            #section2 p {
+                font-size: 4vw;
+            }
+
+            #section4 div {
+                flex-direction: column;
+            }
+
+            #section4 {
+                padding-bottom: 5%;
+            }
+
+            #section4 h1 {
+                margin-right: 0;
+                font-size: 4vw;
+                padding: 0;
+            }
+
+            #section4 {
+                background-color: #202a70;
+                place-content: center;
+                text-align: center;
+            }
+
+            .text-content-sec4 {
+                margin-left: 0;
+            }
+
+            .line2 {
+                font-size: 5vw;
+                margin: -2.5vw 0;
+            }
+
+            .line3 {
+                font-size: 11.5vw;
+                margin: -1.5vw 0;
+            }
+
+            .line4 {
+                font-size: 15vw;
+                transform: scaleY(5);
+                padding: 15vw;
+            }
+
+            .line5 {
+                font-size: 4vw;
+            }
+
+            .line6 {
+                font-size: 3.2vw;
             }
         }
 
@@ -290,7 +439,7 @@
     <nav>
         <!-- Logo Holder -->
         <div class="logo">
-            <img src="assets/Selsium/Selsium-01.png" alt="Logo">
+            <img draggable="false" src="assets/Selsium/Selsium-01.png" alt="Logo">
         </div>
 
         <!-- Menu Items -->
@@ -303,13 +452,12 @@
         </div>
     </nav>
     <!-- Section 1: Image Right, Text Left -->
-    <section id="section1" class="section text-left"
-        style=" background: url(assets/Selsium/1/BG.png); background-size: cover;">
+    <section id="section1" class="section text-left" style=" ">
         <div class="image-content">
-            <img src="assets/Selsium/1/pro.png" alt="Selsium Shampoo">
+            <img draggable="false" src="assets/Selsium/1/pro.png" alt="Selsium Shampoo">
         </div>
         <div class="text-content">
-            <div class="line1"><img src="assets/Selsium/Selsium-01.png" alt="logo"></div>
+            <div class="line1"><img draggable="false" src="assets/Selsium/Selsium-01.png" alt="logo"></div>
             <div class="line2">ANTI - DANDRUFF</div>
             <div class="line3">SHAMPOO</div>
             <div class="line4">N0.1</div>
@@ -322,11 +470,10 @@
     <!-- Section 2: Image Left, Text Right -->
     <section id="section2" class="section">
         <div class="image-content">
-            <img src="assets/Selsium/2/mod.png" alt="Selenium Sulfide">
+            <img draggable="false" src="assets/Selsium/2/mod.png" alt="Selenium Sulfide">
         </div>
         <div class="text-content-reg">
-            <h2
-                style="color: #2e9c5b;font-size: 3.5vw; font-weight: bolder; padding-bottom: 3vw;">
+            <h2>
                 why use selsium ?
             </h2>
             <p>- Treats dandruff and itchy scalp. </p>
@@ -338,17 +485,17 @@
 
     <!-- Section 3: Full-Width Image -->
     <section id="section3" class="section">
-        <img src="assets/Selsium/3/pro & text.png" alt="Dandruff Causes" class="full-width-image">
+        <img draggable="false" src="assets/Selsium/3/pro & text.png" alt="Dandruff Causes" class="full-width-image">
     </section>
 
     <!-- Section 4: Image Left, Text Right -->
-    <section id="section4" class="section" style="background-color: #202a70; place-content: center;">
-        <h1 style="color: white;margin: 20px 0px;margin-right: auto; font-size: 3vw;">1. Understanding Dandruff: couses
+    <section id="section4" class="section">
+        <h1>1. Understanding Dandruff: couses
             and solutions
         </h1>
-        <div style="display: flex; flex-direction: row; align-items: center;">
+        <div>
             <div class="image-content">
-                <img src="assets/Selsium/4/1.png" alt="Understanding Dandruff">
+                <img draggable="false" src="assets/Selsium/4/1.png" alt="Understanding Dandruff">
             </div>
             <div class="text-content-sec4" style="text-align: justify;">
 
@@ -368,25 +515,25 @@
     <!-- Footer -->
     <footer id="footer">
         <div class="left-column">
-            <img src="assets/Selsium/Selsium-01.png" alt="">
+            <img draggable="false" src="assets/Selsium/Selsium-01.png" alt="">
             <p>Selsium - An effective treatment for dandruff and itching.
                 It cleanses, hydrates, and leaves hair soft.</p>
         </div>
         <div class="right-column">
             <div class="social">
-                <img src="location.png" alt="Facebook">
+                <img draggable="false" src="location.png" alt="Facebook">
                 <span>this is location</span>
             </div>
             <div class="social">
-                <img src="phone.png" alt="Twitter">
+                <img draggable="false" src="phone.png" alt="Twitter">
                 <span>this is phone</span>
             </div>
             <div class="social">
-                <img src="mail.png" alt="Instagram">
+                <img draggable="false" src="mail.png" alt="Instagram">
                 <span>this is mail</span>
             </div>
             <div class="social">
-                <img src="facebook.png" alt="Facebook">
+                <img draggable="false" src="facebook.png" alt="Facebook">
                 <span>this is facebook</span>
             </div>
         </div>
