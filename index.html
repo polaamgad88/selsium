@@ -7,6 +7,8 @@
     <title>Selsium</title>
     <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
 
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+
     <style>
         * {
             margin: 0;
@@ -15,7 +17,7 @@
         }
 
         body {
-            font-family: 'Bebas-Regular', sans-serif;
+            font-family: 'bebas', sans-serif;
             line-height: 1.6;
         }
 
@@ -56,6 +58,13 @@
             background-size: 100%;
             background-repeat: no-repeat;
             background-position: bottom;
+
+        }
+        #section2 h2 {
+            font-family: 'Helveticaneue';
+        }
+        #section2 p {
+            font-family: Helvetica;
         }
 
         #section2 img {
@@ -70,12 +79,20 @@
             border-radius: 0;
             margin-bottom: 4vw;
         }
+        #section4 h1 {
+            font-family: 'bebasneue';
+
+        }
+        #section4 p {
+            font-family: 'Helveticaneue'; 
+
+        }
 
         .text-content-reg {
             flex: 1;
             margin-bottom: auto;
             margin-left: -6vw;
-            font-family: 'Bebas-Regular', sans-serif;
+            font-family: 'bebas', sans-serif;
         }
 
         .text-content-sec4 {
@@ -102,12 +119,12 @@
         .line4,
         .line5,
         .line6 {
-            margin: -0.7vw 0;
+            margin: -0.5vw 0;
         }
 
 
         .line1 {
-            font-family: 'Bebas-Regular', sans-serif;
+            font-family: 'bebas', sans-serif;
             font-size: 5vw;
             font-weight: bolder;
             text-transform: uppercase;
@@ -120,8 +137,8 @@
 
 
         .line2 {
-            font-family: 'Bebas-Regular', sans-serif;
-            font-size: 1.3vw;
+            font-family: 'bebas', sans-serif;
+            font-size: 2vw;
             width: 100%;
             text-align: center;
             font-weight: bolder;
@@ -130,9 +147,9 @@
         }
 
         .line3 {
-            font-family: 'Bebas-Regular', monospace;
-            font-size: 3.1vw;
-            font-weight: 1000;
+            font-family: 'Helveticaneue', monospace;
+            font-size: 2.2vw;
+            font-weight: 900;
             width: 100%;
             text-align: center;
             color: #2e9c5b;
@@ -140,7 +157,7 @@
         }
 
         .line4 {
-            font-family: 'Bebas-Regular', sans-serif;
+            font-family: 'bebas', sans-serif;
             font-size: 6vw;
             width: 100%;
             color: #202a70;
@@ -148,13 +165,13 @@
             text-align: center;
             text-transform: uppercase;
             transform: scaleY(3.5);
-            padding: 4.5vw;
+            padding: 4vw;
             font-weight: bolder;
         }
 
         .line5 {
-            font-family: 'Bebas-Regular', sans-serif;
-            font-size: 1.3vw;
+            font-family: 'bebas', sans-serif;
+            font-size: 1.5vw;
             text-transform: uppercase;
             color: #202a70;
             font-weight: bolder;
@@ -162,8 +179,8 @@
         }
 
         .line6 {
-            font-family: 'Bebas-Regular', sans-serif;
-            font-size: 1vw;
+            font-family: 'bebas', sans-serif;
+            font-size: 1.2vw;
             background-color: #2e9c5b;
             color: white;
             padding: 0.3vw 0.6vw;
@@ -250,7 +267,7 @@
             flex: 1;
             font-size: 1.7vw;
             font-weight: bold;
-            font-family: 'Bebas-Regular';
+            font-family: 'bebas';
             padding-right: 10vw;
             color: #202a70;
         }
@@ -260,7 +277,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 15px;
+            gap: 5px;
         }
 
         #footer .social {
@@ -440,7 +457,17 @@
 
         @font-face {
             font-family: bebas;
-            src: url(/assets/Bebas-Regular.ttf);
+            src: url('./assets/Bebas-Regular.ttf');
+        }
+
+        @font-face {
+            font-family: bebasneue;
+            src: url('./assets/BEBASNEUE-REGULAR.TTF');
+        }
+
+        @font-face {
+            font-family: Helveticaneue;
+            src: url('./assets/HELVETICANEUE.TTF');
         }
     </style>
 </head>
@@ -456,7 +483,10 @@
         <!-- Menu Items -->
         <div class="menu">
             <a href="./index.html">Home</a>
+            <a href="./index.html">Home</a>
             <a href="#section2">About</a>
+            <a href="#section3">Our Product</a>
+            <a href="#section4">Articles</a>
             <a href="#section3">Our Product</a>
             <a href="#section4">Articles</a>
             <a href="#footer">Contact</a>
@@ -473,7 +503,7 @@
             <div class="line3">SHAMPOO</div>
             <div class="line4">N0.1</div>
             <div class="line5">Selenium sulfuide 1%</div>
-            <div class="line6">recommended by doctors</div>
+            <div class="line6">Recommended by doctors</div>
         </div>
 
     </section>
@@ -489,6 +519,7 @@
             </h2>
             <p>- Treats dandruff and itchy scalp. </p>
             <p>- Contains selenium sulfide to fight fungi and treat scalp inflamation.</p>
+            <p>- Contains aloe vera to hydrate dry hair and repair damage</p>
             <p>- Contains aloe vera to hydrate dry hair and repair damage</p>
         </div>
 
