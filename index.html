@@ -501,27 +501,152 @@
 
     <!-- Section 4: Image Left, Text Right -->
     <section id="section4" class="section">
-        <h1>1. Understanding Dandruff: couses
-            and solutions
-        </h1>
-        <div>
-            <div class="image-content">
-                <img draggable="false" src="assets/Selsium/4/1.png" alt="Understanding Dandruff">
+        <h1>Articles: Understanding Dandruff</h1>
+        <div class="carousel">
+            <div class="carousel-track">
+                <!-- Article 1 -->
+                <div class="carousel-item">
+                    <div class="image-content">
+                        <img draggable="false" src="assets/Selsium/4/1.png" alt="Understanding Dandruff">
+                    </div>
+                    <div class="text-content-sec4" style="text-align: justify;">
+                        <p style="color: #fff;">Dandruff is a common scalp condition that causes the shedding of dead skin cells
+                            from the scalp, often resulting in visible white or yellow flakes in your hair. It can be
+                            accompanied by itching and irritation, making it an uncomfortable and sometimes embarrassing
+                            issue to deal with. Understanding the causes of dandruff is the first step to finding the right
+                            solution for this condition.</p>
+                    </div>
+                </div>
+                <!-- Article 2 -->
+                <div class="carousel-item">
+                    <div class="image-content">
+                        <img draggable="false" src="assets/Selsium/4/2.png" alt="Treating Dandruff">
+                    </div>
+                    <div class="text-content-sec4" style="text-align: justify;">
+                        <p style="color: #fff;">Treating dandruff involves using shampoos containing active ingredients like
+                            selenium sulfide or zinc pyrithione. Regular cleansing and moisturizing your scalp can also help
+                            prevent the buildup of skin cells and alleviate symptoms.</p>
+                    </div>
+                </div>
             </div>
-            <div class="text-content-sec4" style="text-align: justify;">
-
-                <p style="color: #fff;">Dandruff is a common scalp condition that causes the
-                    shedding of dead skin cells
-                    from the scalp,
-                    often resulting in visible white or yellow flakes in your hair. It can be accompanied by itching and
-                    irritation, making it an uncomfortable and sometimes embarrassing issue to deal with. Understanding
-                    the causes of dandruff is the first step to finding the right solution for this condition.
-                </p>
-            </div>
+            <!-- Arrows for navigation -->
+            <button class="carousel-button left">&lt;</button>
+            <button class="carousel-button right">&gt;</button>
         </div>
-
-
+        <!-- Dots for navigation -->
+        <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+        </div>
     </section>
+    
+    <style>
+      /* Carousel styles */
+      .carousel {
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          max-width: 900px;
+          margin: auto;
+      }
+    
+      .carousel-track {
+          display: flex;
+          transition: transform 0.5s ease-in-out;
+      }
+    
+      .carousel-item {
+          min-width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: justify;
+      }
+    
+      .carousel-item img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 8px;
+      }
+    
+      .carousel-button {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background: rgba(0, 0, 0, 0.5);
+          color: #fff;
+          border: none;
+          padding: 10px 15px;
+          cursor: pointer;
+          z-index: 2;
+          border-radius: 50%;
+      }
+    
+      .carousel-button.left {
+          left: 10px;
+          color: white;
+      }
+    
+      .carousel-button.right {
+          right: 10px;
+      }
+    
+      .carousel-dots {
+          text-align: center;
+          margin-top: 10px;
+      }
+    
+      .dot {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          margin: 5px;
+          background: rgba(255, 255, 255, 0.5);
+          border-radius: 50%;
+          cursor: pointer;
+      }
+    
+      .dot.active {
+          background: grey;
+      }
+    </style>
+    
+    <script>
+      const track = document.querySelector('.carousel-track');
+      const items = Array.from(track.children);
+      const nextButton = document.querySelector('.carousel-button.right');
+      const prevButton = document.querySelector('.carousel-button.left');
+      const dotsNav = document.querySelector('.carousel-dots');
+      const dots = Array.from(dotsNav.children);
+    
+      let currentIndex = 0;
+    
+      function updateCarousel(index) {
+          const itemWidth = items[0].getBoundingClientRect().width;
+          track.style.transform = `translateX(-${itemWidth * index}px)`;
+          dots.forEach(dot => dot.classList.remove('active'));
+          dots[index].classList.add('active');
+      }
+    
+      nextButton.addEventListener('click', () => {
+          currentIndex = (currentIndex + 1) % items.length;
+          updateCarousel(currentIndex);
+      });
+    
+      prevButton.addEventListener('click', () => {
+          currentIndex = (currentIndex - 1 + items.length) % items.length;
+          updateCarousel(currentIndex);
+      });
+    
+      dots.forEach((dot, index) => {
+          dot.addEventListener('click', () => {
+              currentIndex = index;
+              updateCarousel(currentIndex);
+          });
+      });
+    </script>
+    
 
     <!-- Footer -->
     <footer id="footer">
