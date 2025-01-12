@@ -15,7 +15,7 @@
         }
 
         body {
-            font-family: 'Bebas-Regular', sans-serif;
+            font-family: 'bebas', sans-serif;
             line-height: 1.6;
         }
 
@@ -72,7 +72,7 @@
             flex: 1;
             margin-bottom: auto;
             margin-left: -6vw;
-            font-family: 'Bebas-Regular', sans-serif;
+            font-family: 'bebas', sans-serif;
         }
 
         .text-content-sec4 {
@@ -104,7 +104,7 @@
 
 
         .line1 {
-            font-family: 'Bebas-Regular', sans-serif;
+            font-family: 'bebas', sans-serif;
             font-size: 5vw;
             font-weight: bolder;
             text-transform: uppercase;
@@ -117,7 +117,7 @@
 
 
         .line2 {
-            font-family: 'Bebas-Regular', sans-serif;
+            font-family: 'Helveticaneue', sans-serif;
             font-size: 1.3vw;
             width: 100%;
             text-align: center;
@@ -127,7 +127,7 @@
         }
 
         .line3 {
-            font-family: 'Bebas-Regular', monospace;
+            font-family: 'bebas', monospace;
             font-size: 3.1vw;
             font-weight: 1000;
             width: 100%;
@@ -137,7 +137,7 @@
         }
 
         .line4 {
-            font-family: 'Bebas-Regular', sans-serif;
+            font-family: 'bebas', sans-serif;
             font-size: 6vw;
             width: 100%;
             color: #202a70;
@@ -150,7 +150,7 @@
         }
 
         .line5 {
-            font-family: 'Bebas-Regular', sans-serif;
+            font-family: 'bebas', sans-serif;
             font-size: 1.3vw;
             text-transform: uppercase;
             color: #202a70;
@@ -159,7 +159,7 @@
         }
 
         .line6 {
-            font-family: 'Bebas-Regular', sans-serif;
+            font-family: 'bebas', sans-serif;
             font-size: 1vw;
             background-color: #2e9c5b;
             color: white;
@@ -243,7 +243,7 @@
             flex: 1;
             font-size: 1.7vw;
             font-weight: bold;
-            font-family: 'Bebas-Regular';
+            font-family: 'bebas';
             padding-right: 10vw;
             color: #202a70;
         }
@@ -253,7 +253,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 15px;
+            gap: 5px;
         }
 
         #footer .social {
@@ -278,11 +278,35 @@
                 display: none;
                 /* Hide menu on smaller screens */
             }
+
+            nav {
+                place-content: center;
+            }
+
+            .logo img {
+                width: 30vw;
+            }
+
+
+            footer {
+                flex-direction: column;
+                gap: 4vw
+            }
         }
 
         @font-face {
             font-family: bebas;
-            src: url(/assets/Bebas-Regular.ttf);
+            src: url('./assets/Bebas-Regular.ttf');
+        }
+
+        @font-face {
+            font-family: bebasneue;
+            src: url('./assets/BEBASNEUE-REGULAR.TTF');
+        }
+
+        @font-face {
+            font-family: Helveticaneue;
+            src: url('./assets/HELVETICANEUE.TTF');
         }
     </style>
 </head>
@@ -293,8 +317,9 @@
         <!-- Logo Holder -->
         <div class="logo">
             <a href="./index.html">
-            <img src="assets/Selsium/Selsium-01.png" draggable="false" alt="Logo">
-     </a>   </div>
+                <img src="assets/Selsium/Selsium-01.png" draggable="false" alt="Logo">
+            </a>
+        </div>
 
         <!-- Menu Items -->
         <div class="menu">
@@ -328,8 +353,7 @@
             <img src="assets/Selsium/2/mod.png" draggable="false" alt="Selenium Sulfide">
         </div>
         <div class="text-content-reg">
-            <h2
-                style="color: #2e9c5b;font-size: 3.5vw; font-weight: bolder; padding-bottom: 3vw;">
+            <h2 style="color: #2e9c5b;font-size: 3.5vw; font-weight: bolder; padding-bottom: 3vw;">
                 Why use Selsium ?
             </h2>
             <p>- Treats dandruff and itchy scalp. </p>
@@ -346,14 +370,19 @@
 
     <!-- Section 4: Image Left, Text Right -->
     <section id="section4" class="section" style="background-color: #202a70; place-content: center;">
-        <h1 style="color: white;margin: 20px 0px;margin-right: auto; font-size: 3vw;"> Understanding Dandruff: Causes and Solutions        </h1>
+        <h1 style="color: white;margin: 20px 0px;margin-right: auto; font-size: 3vw;"> Understanding Dandruff: Causes
+            and Solutions </h1>
         <div style="display: flex; flex-direction: row; align-items: center;">
             <div class="image-content">
                 <img src="assets/Selsium/4/1.png" alt="Understanding Dandruff">
             </div>
             <div class="text-content-sec4" style="text-align: justify;">
 
-                <p style="color: #fff;">Dandruff is a common scalp condition characterized by the shedding of dead skin cells, often resulting in visible white or yellow flakes in the hair. It is frequently accompanied by itching and irritation, making it both uncomfortable and, at times, embarrassing. Understanding the causes of dandruff is an essential step toward finding the right solutions to manage this condition.
+                <p style="color: #fff;">Dandruff is a common scalp condition characterized by the shedding of dead skin
+                    cells, often resulting in visible white or yellow flakes in the hair. It is frequently accompanied
+                    by itching and irritation, making it both uncomfortable and, at times, embarrassing. Understanding
+                    the causes of dandruff is an essential step toward finding the right solutions to manage this
+                    condition.
 
                 </p>
             </div>
