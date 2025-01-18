@@ -68,7 +68,7 @@
         }
 
         #section2 img {
-            max-width: 75%;
+            /* max-width: 75%; */
             height: auto;
             border-radius: 0;
         }
@@ -418,6 +418,47 @@
             background: #2e9c5b;
         }
 
+        .comparison-container {
+            position: relative;
+            width: 35vw;
+            height: 30vw;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .image-before,
+        .image-after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .image-before img,
+        .image-after img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-after {
+            clip-path: inset(0 50% 0 0);
+            transition: clip-path 0.1s ease-in-out;
+        }
+
+        .slider-line {
+            position: absolute;
+            height: 100%;
+            width: 2px;
+            background: white;
+            top: 0;
+            left: 50%;
+            z-index: 2;
+            pointer-events: none;
+            transition: left 0.1s ease-in-out;
+        }
+
         /* Responsive Menu for Small Screens */
         @media (max-width: 768px) {
             .section {
@@ -475,6 +516,11 @@
 
             #section2 .image-content {
                 text-align-last: center;
+
+            }
+
+            #section2 img {
+                text-align-last: center;
             }
 
             #section2 {
@@ -496,6 +542,11 @@
             footer {
                 flex-direction: column;
 
+            }
+
+            .comparison-container {
+                width: 67vw;
+                height: 67vw;
             }
 
             #footer {
@@ -605,10 +656,11 @@
         <!-- Logo Holder -->
         <div class="logo">
             <a href="./index.html">
-                <img draggable="false" src="assets/Selsium/Selsium-01.png" alt="Logo" >
-            </a>        </div>
+                <img draggable="false" src="assets/Selsium/Selsium-01.png" alt="Logo">
+            </a>
+        </div>
         <div class="menu_mobile">
-            <a href="./distributors.html" >Distributors</a>
+            <a href="./distributors.html">Distributors</a>
         </div>
         <!-- Menu Items -->
         <div class="menu">
@@ -643,8 +695,38 @@
     <!-- Section 2: Image Left, Text Right -->
     <section id="section2" class="section">
         <div class="image-content">
-            <img draggable="false" src="assets/Selsium/2/mod.png" alt="Selenium Sulfide">
+            <div class="comparison-container" id="hover-slider">
+                <!-- Before Image -->
+                <div class="image-before">
+                    <img src="./assets/Selsium/4/1.png" alt="Before">
+                </div>
+
+                <!-- After Image -->
+                <div class="image-after">
+                    <img src="./assets/Selsium/4/2.png" alt="After">
+                </div>
+
+                <!-- Slider Line -->
+                <div class="slider-line"></div>
+            </div>
         </div>
+
+
+        <script>
+            const container = document.getElementById('hover-slider');
+            const imageAfter = container.querySelector('.image-after');
+            const sliderLine = container.querySelector('.slider-line');
+
+            container.addEventListener('mousemove', (e) => {
+                const containerWidth = container.offsetWidth;
+                const offsetX = e.offsetX; // Mouse position relative to the container
+                const percentage = (offsetX / containerWidth) * 100; // Calculate percentage
+                imageAfter.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+                sliderLine.style.left = `${percentage}%`;
+            });
+        </script>
+
+
         <div class="text-content-reg">
             <h2>
                 Why use selsium ?

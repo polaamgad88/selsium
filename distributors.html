@@ -601,18 +601,33 @@
 
 
         }
-h1{
-    text-align: center;
-                 padding: 20px 0; 
-                font-size: 2.5vw;
-}
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 2.5vw;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            width: 60vw;
+        }
 
         @media screen and (max-width: 768px) {
-            
+
             h1 {
                 text-align: center;
-                 padding: 20px 0; 
+                padding: 20px 0;
                 font-size: 6vw;
+            }
+
+            .card {
+                width: 85vw;
             }
         }
     </style>
@@ -624,8 +639,8 @@ h1{
         <!-- Logo Holder -->
         <div class="logo">
             <a href="./index.html">
-            <img draggable="false" src="assets/Selsium/Selsium-01.png" alt="Logo" >
-        </a>
+                <img draggable="false" src="assets/Selsium/Selsium-01.png" alt="Logo">
+            </a>
         </div>
 
         <div class="menu_mobile">
@@ -650,23 +665,17 @@ h1{
     <h1>Distributors</h1>
 
     <!-- style="text-align: center; padding: 20px 0; color: #333; font-size: 2.4vw;" -->
-  
+
     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px;">
         <!-- Distributor 1 -->
-        <div
-            style="background-color: #fff; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; text-align: center; width: 300px;">
+        <div class="card">
             <img src="./assets/GEM Group 2024.jpg" alt="Distributor 1"
                 style="width: 100%; height: 300px; object-fit: cover;">
             <div style="padding: 15px;">
                 <h3 style="margin: 0; font-size: 30px; color: #333;">GEM EGYPT</h3>
-<<<<<<< HEAD
-                <p style="margin: 8px 0; color: #34488c; font-size: 24px;"> <a href="mailto:info@gemegypt.com" style="color: #34488c; text-decoration: none;">info@gemegypt.com</a></p>
-                <p style="margin: 8px 0; color: #34488c; font-size: 24px;">+20 1222347852                </p>
-=======
-                <p style="margin: 8px 0; color: #34488c; font-size: 24px;"> <a href="mailto:distributor1@example.com"
+                <p style="margin: 8px 0; color: #34488c; font-size: 24px;"> <a href="mailto:info@gemegypt.com"
                         style="color: #34488c; text-decoration: none;">info@gemegypt.com</a></p>
                 <p style="margin: 8px 0; color: #34488c; font-size: 24px;">+20 1222347852 </p>
->>>>>>> e74458d0c68408c4f66fb91a7984175a6b69a5ad
 
                 <p style="margin: 8px 0; color: #34488c; font-size: 24px;"> 4 Asmaa Fahmy, Ard El Golf, Heliopolis,
                     Pharma Plaza Build Cairo, Egypt</p>
