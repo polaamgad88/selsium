@@ -232,20 +232,40 @@
             height: auto;
         }
 
+
         .menu {
             display: flex;
             gap: 20px;
+
         }
 
         .menu a {
             text-decoration: none;
-            color: #2c3e50;
+            color: #34498cff;
             font-weight: 500;
             font-size: 1.5vw;
             transition: color 0.3s ease;
         }
 
         .menu a:hover {
+            color: #007bff;
+        }
+
+        .menu_mobile {
+            display: none;
+            color: #34498cff;
+            gap: 20px;
+        }
+
+        .menu_mobile a {
+            text-decoration: none;
+            color: #34498cff;
+            font-weight: 500;
+            font-size: 2vw;
+            transition: color 0.3s ease;
+        }
+
+        .menu_mobile a:hover {
             color: #007bff;
         }
 
@@ -401,11 +421,20 @@
 
         /* Responsive Menu for Small Screens */
         @media (max-width: 768px) {
-            h1{
+            h1 {
                 font-size: 60vw;
             }
+
             .section {
                 padding: 0px 5%;
+            }
+
+            .menu_mobile {
+                display: block;
+            }
+
+            .menu_mobile a {
+                font-size: 3.3vw;
             }
 
             .menu {
@@ -433,6 +462,7 @@
 
             nav {
                 place-content: center;
+                flex-direction: column;
             }
 
             #section1 {
@@ -576,17 +606,24 @@
     <!-- Navigation Bar -->
     <nav>
         <!-- Logo Holder -->
-        <div class="logo">
-            <img draggable="false" src="assets/Selsium/Selsium-01.png" alt="Logo">
-        </div>
+        <a href="./index.html">
+            <div class="logo">
+                <img draggable="false" src="assets/Selsium/Selsium-01.png" alt="Logo">
+            </div>
+        </a>
 
+        <div class="menu_mobile">
+            <a href="./distributors.html">Distributors</a>
+        </div>
         <!-- Menu Items -->
         <div class="menu">
             <a href="./index.html">Home</a>
-            <a href="./index.html#section2" >About</a>
-            <a href="./index.html#section3">Our Product</a>
-            <a href="./index.html#section_article">Articles</a>
-            <a href="./index.html#footer" style="background-color: #2e9c5b;
+            <a href="#section2">About</a>
+            <a href="#section3">Our Product</a>
+            <a href="#section_article">Articles</a>
+            <a href="./distributors.html">Distributors</a>
+
+            <a href="#footer" style="background-color: #2e9c5b;
             color: white;
             padding: 0.1vw 0.5vw;
             border-radius: 1vw;
@@ -598,52 +635,56 @@
 
     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px;">
         <!-- Distributor 1 -->
-        <div style="background-color: #fff; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; text-align: center; width: 300px;">
-            <img src="./assets/GEM Group 2024.jpg" alt="Distributor 1" style="width: 100%; height: 300px; object-fit: cover;">
+        <div
+            style="background-color: #fff; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; text-align: center; width: 300px;">
+            <img src="./assets/GEM Group 2024.jpg" alt="Distributor 1"
+                style="width: 100%; height: 300px; object-fit: cover;">
             <div style="padding: 15px;">
                 <h3 style="margin: 0; font-size: 30px; color: #333;">GEM EGYPT</h3>
-                <p style="margin: 8px 0; color: #34488c; font-size: 24px;"> <a href="mailto:distributor1@example.com" style="color: #34488c; text-decoration: none;">info@gemegypt.com</a></p>
-                <p style="margin: 8px 0; color: #34488c; font-size: 24px;">+20 1222347852                </p>
+                <p style="margin: 8px 0; color: #34488c; font-size: 24px;"> <a href="mailto:distributor1@example.com"
+                        style="color: #34488c; text-decoration: none;">info@gemegypt.com</a></p>
+                <p style="margin: 8px 0; color: #34488c; font-size: 24px;">+20 1222347852 </p>
 
-                <p style="margin: 8px 0; color: #34488c; font-size: 24px;"> 4 Asmaa Fahmy, Ard El Golf, Heliopolis, Pharma Plaza Build Cairo, Egypt</p>
+                <p style="margin: 8px 0; color: #34488c; font-size: 24px;"> 4 Asmaa Fahmy, Ard El Golf, Heliopolis,
+                    Pharma Plaza Build Cairo, Egypt</p>
 
             </div>
         </div>
- 
 
 
-    <!-- Footer -->
-    <footer id="footer">
-        <hr>
-        <div class="left-column">
-            
-            <img draggable="false" src="assets/Selsium/Selsium-01.png" alt="">
-            <p>Selsium - An effective treatment for dandruff and itching.
-                It cleanses, hydrates, and leaves hair soft.</p>
-        </div>
-        <div class="right-column">
-            <div class="social">
-                <img draggable="false" src="./assets/Selsium/location.png">
-                <!-- <span style="color: #202a71;">4Asmaa Fahmy, Ard El Golf, Heliopolis, Pharma Plaza Build Cairo, Egypt</span> -->
-                <span style="color: #202a71;">Northside House, Mount Pleasant, Barnet, Herts, United Kingdom, EN5
-                    9EE</span>
 
+        <!-- Footer -->
+        <footer id="footer">
+            <hr>
+            <div class="left-column">
+
+                <img draggable="false" src="assets/Selsium/Selsium-01.png" alt="">
+                <p>Selsium - An effective treatment for dandruff and itching.
+                    It cleanses, hydrates, and leaves hair soft.</p>
             </div>
-            <div class="social">
-                <img draggable="false" src="./assets/Selsium/phone.png">
-                <span style="color: #202a71;">01222347852</span>
+            <div class="right-column">
+                <div class="social">
+                    <img draggable="false" src="./assets/Selsium/location.png">
+                    <!-- <span style="color: #202a71;">4Asmaa Fahmy, Ard El Golf, Heliopolis, Pharma Plaza Build Cairo, Egypt</span> -->
+                    <span style="color: #202a71;">Northside House, Mount Pleasant, Barnet, Herts, United Kingdom, EN5
+                        9EE</span>
+
+                </div>
+                <div class="social">
+                    <img draggable="false" src="./assets/Selsium/phone.png">
+                    <span style="color: #202a71;">01222347852</span>
+                </div>
+                <div class="social">
+                    <img draggable="false" src="./assets/Selsium/mail.png">
+                    <span style="color: #202a71;">info@selsium.com</span>
+                </div>
+                <div class="social">
+                    <img draggable="false" src="./assets/Selsium/fb.png">
+                    <a href="https://www.facebook.com/profile.php?id=61566365698723 ">
+                        <span style="color: #202a71;">Selsium</span></a>
+                </div>
             </div>
-            <div class="social">
-                <img draggable="false" src="./assets/Selsium/mail.png">
-                <span style="color: #202a71;">info@selsium.com</span>
-            </div>
-            <div class="social">
-                <img draggable="false" src="./assets/Selsium/fb.png">
-                <a href="https://www.facebook.com/profile.php?id=61566365698723 ">
-                    <span style="color: #202a71;">Selsium</span></a>
-            </div>
-        </div>
-    </footer>
+        </footer>
 </body>
 
 </html>
