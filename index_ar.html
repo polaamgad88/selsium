@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selsium</title>
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" sizes="64x64">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'bebas', sans-serif;
+            line-height: 1.6;
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 10%;
+            flex-wrap: wrap;
+        }
+
+        .section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .section h2 {
+            color: #2e9c5b;
+            font-size: 3.5vw;
+            font-weight: bolder;
+            padding-bottom: 3vw;
+        }
+
+        .section p {
+            font-size: 1.7vw;
+            margin-top: 10px;
+            color: #202a70;
+            font-weight: bold;
+        }
+
+        .section.text-left {
+            flex-direction: row-reverse;
+        }
+
+        #section2 {
+            background-image: url(assets/Selsium/2/sh.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: bottom;
+
+        }
+
+        #section2 h2 {
+            font-family: 'Helveticaneue';
+        }
+
+        #section2 p {
+            font-family: Helvetica;
+        }
+
+        #section2 img {
+            /* max-width: 75%; */
+            height: auto;
+            border-radius: 0;
+        }
+
+        .section4 img {
+            max-width: 60%;
+            height: auto;
+            border-radius: 0;
+            margin-bottom: 4vw;
+        }
+
+        .section4 h1 {
+            font-family: 'bebasneue';
+
+        }
+
+        .section4 p {
+            font-family: 'Helveticaneue';
+            margin-right: 60px;
+        }
+
+        .section4 img {
+            margin-left: 60px;
+        }
+
+        .text-content-reg {
+            flex: 1;
+            margin-bottom: auto;
+            margin-left: -6vw;
+            font-family: 'bebas', sans-serif;
+        }
+
+        .text-content-sec4 {
+            font-family: 'Helveticaneue';
+            flex: 1;
+            margin-bottom: auto;
+            margin-left: 6vw;
+        }
+
+        .text-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            /* padding: 1.7vw; */
+            border-radius: 0.7vw;
+            max-width: fit-content;
+            margin: auto;
+        }
+
+        /* .line1,
+        .line2,
+        .line3,
+        .line4,
+        .line5,
+        .line6 {
+            margin: -0.5vw 0;
+        } */
+
+
+        .line1 {
+            font-family: 'HelveticaNeueLT';
+            font-size: 5vw;
+            font-weight: bolder;
+            text-transform: uppercase;
+        }
+
+        .line1 img {
+            width: 20vw;
+            height: auto;
+        }
+
+
+        .line2 {
+            margin-right: -5.4vw;
+            margin-top: 2.5vw;
+            font-family: 'HelveticaNeueLT';
+            font-size: 4vw;
+            width: 100%;
+            text-align: center;
+            font-weight: bolder;
+            color: #202a70;
+            text-transform: uppercase;
+            transform: rotate(-90deg);
+        }
+
+        .line3 {
+            transform: scale(1.5);
+            line-height: 1.2;
+            font-family: 'HelveticaNeueLT';
+            font-size: 3vw;
+            font-weight: 900;
+            width: 100%;
+            padding-bottom: 2vw;
+            text-align: center;
+            color: #202a70;
+            text-transform: uppercase;
+        }
+
+        .line4 {
+            font-family: 'HelveticaNeueLT';
+            font-size: 17vw;
+            margin-top: -4vw;
+            margin-right: -2vw;
+            width: 100%;
+            color: #202a70;
+            font-stretch: ultra-expanded;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bolder;
+        }
+
+        .line5 {
+            font-family: 'HelveticaNeueLT';
+            font-size: 1.5vw;
+            text-transform: uppercase;
+            color: #202a70;
+            font-weight: bolder;
+            margin: 0
+        }
+
+        .line6 {
+            width: 13vw;
+            font-family: 'HelveticaNeueLT';
+            font-size: 1.4vw;
+            background-color: #2e9c5b;
+            color: white;
+            padding: 0.3vw 1.8vw;
+            margin-top: 1vw;
+            border-radius: 1vw;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .image-content {
+            flex: 1;
+        }
+
+        .full-width-image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 5%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 14vw;
+            height: auto;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #34498cff;
+            font-weight: 500;
+            font-size: 1.5vw;
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: #007bff;
+        }
+
+        .menu_mobile {
+            display: none;
+            color: #34498cff;
+            gap: 20px;
+        }
+
+        .menu_mobile a {
+            text-decoration: none;
+            color: #34498cff;
+            font-weight: 500;
+            font-size: 2vw;
+            transition: color 0.3s ease;
+        }
+
+        .menu_mobile a:hover {
+            color: #007bff;
+        }
+
+        #footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 1vw;
+            margin: 4vw;
+            margin-left: 10vw;
+            background-color: white;
+        }
+
+        #footer img {
+
+            width: 20vw;
+            height: auto;
+
+        }
+
+        #footer a {
+            text-decoration: none;
+            color: #202a70;
+        }
+
+        #footer .left-column {
+            max-width: 46vw;
+            flex: 1;
+            font-size: 1.7vw;
+            font-weight: bold;
+            font-family: 'bebas';
+            padding-right: 10vw;
+            color: #202a70;
+        }
+
+        #footer .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+        }
+
+        #footer .social {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.3vw;
+        }
+
+        #footer .social img {
+            width: 60px;
+            height: 60px;
+        }
+
+        #footer .social span {
+            /* border-bottom: 1px solid #ccc; */
+            flex: 1;
+        }
+
+        #section1 {
+            background: url(assets/Selsium/1/BG.png);
+            background-size: cover;
+        }
+
+        .section4 {
+            background-color: #202a70;
+            place-content: center;
+            text-align: center;
+        }
+
+        .section4 .carousel {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .section4 h1 {
+            color: white;
+            margin: 20px 0px;
+            margin-right: auto;
+            font-size: 3vw;
+        }
+
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            margin: auto;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            /* margin: 50px; */
+            min-width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            text-align: justify;
+        }
+
+        .carousel-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .carousel-button {
+            position: absolute;
+
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            z-index: 2;
+            border-radius: 50%;
+        }
+
+        .carousel-button.left {
+            left: 10px;
+            color: white;
+        }
+
+        .carousel-button.right {
+            right: 10px;
+        }
+
+        .carousel-dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 5px;
+            background: white;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background: #2e9c5b;
+        }
+
+        .comparison-container {
+            position: relative;
+            width: 35vw;
+            height: 30vw;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .image-before,
+        .image-after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .image-before img,
+        .image-after img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-after {
+            clip-path: inset(0 50% 0 0);
+            transition: clip-path 0.1s ease-in-out;
+        }
+
+        .slider-line {
+            position: absolute;
+            height: 100%;
+            width: 2px;
+            background: white;
+            top: 0;
+            left: 50%;
+            z-index: 2;
+            pointer-events: none;
+            transition: left 0.1s ease-in-out;
+        }
+
+        /* Responsive Menu for Small Screens */
+        @media (max-width: 768px) {
+            .section {
+                padding: 0px 5%;
+            }
+
+            .menu_mobile {
+                display: block;
+            }
+
+            .menu_mobile a {
+                font-size: 3.3vw;
+            }
+
+            .menu {
+                display: none;
+                /* Hide menu on smaller screens */
+            }
+
+            .logo img {
+                width: 32vw;
+            }
+
+            #footer img {
+                width: 32vw;
+            }
+
+            #footer .left-column {
+                font-size: 5vw;
+                padding-right: 0;
+                margin-bottom: 3vw;
+            }
+
+            #footer .social {
+                font-size: 4.5vw;
+            }
+
+            nav {
+                place-content: center;
+                flex-direction: column;
+            }
+
+            #section1 {
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            #section1 img {
+                margin-left: -4vw;
+            }
+
+            .line1 img {
+                display: none;
+            }
+
+            #section2 .image-content {
+                text-align-last: center;
+
+            }
+
+            #section2 img {
+                text-align-last: center;
+            }
+
+            #section2 {
+                background-position: center;
+            }
+
+            .text-content-reg {
+                margin-left: 0;
+            }
+
+            .section4 img {
+                margin: 0;
+            }
+
+            .section4 p {
+                margin: 0;
+            }
+
+            footer {
+                flex-direction: column;
+
+            }
+
+            .comparison-container {
+                width: 67vw;
+                height: 67vw;
+            }
+
+            #footer {
+                margin-left: 0;
+                padding: 0;
+                margin: 4vw;
+            }
+
+            #footer .social img {
+                width: 10vw;
+                height: auto;
+            }
+
+
+            #footer .left-column {
+                max-width: max-content;
+            }
+
+            #section1,
+            #section2 {
+                flex-direction: column;
+            }
+
+            .section h2 {
+                font-size: 6vw;
+
+            }
+
+            .section4 p {
+                font-size: 3.5vw;
+            }
+
+            #section2 p {
+                font-size: 4vw;
+            }
+
+            /* .section4 div {
+                flex-direction: column;
+            } */
+
+            .section4 {
+                padding-bottom: 5%;
+            }
+
+            .section4 h1 {
+                margin-right: 0;
+                font-size: 4vw;
+                padding: 0;
+            }
+
+            .text-content-sec4 {
+                margin-left: 0;
+            }
+
+            .line2 {
+                font-size: 9vw;
+                margin: -2.5vw 0;
+            }
+
+            .line3 {
+                font-size: 10vw;
+                margin: -1.5vw 0;
+            }
+
+            .line4 {
+                font-size: 37vw;
+                transform: scaleY(1.8);
+                padding: 0vw;
+                padding-top: 0vw;
+                margin: -2vw 0;
+                margin-top: -7vw;
+            }
+
+            .line5 {
+                font-size: 6.5vw;
+            }
+
+            .line6 {
+                font-size: 5.5vw;
+            }
+
+            .carousel-item {
+                flex-direction: column;
+            }
+        }
+
+        @font-face {
+            font-family: bebas;
+            src: url('./assets/Bebas-Regular.ttf');
+        }
+
+        @font-face {
+            font-family: bebasneue;
+            src: url('./assets/BEBASNEUE-REGULAR.TTF');
+        }
+
+        @font-face {
+            font-family: Helveticaneue;
+            src: url('./assets/HELVETICANEUE.TTF');
+        }
+
+        @font-face {
+            font-family: HelveticaNeueLT_B;
+            src: url('./assets/HelveticaNeueLT_B.otf');
+        }
+
+        @font-face {
+            font-family: HelveticaNeueLT;
+            src: url('./assets/HelveticaNeueLT.otf');
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <!-- Logo Holder -->
+        <div class="logo">
+            <a href="./index.html">
+                <img draggable="false" src="assets/Selsium/Selsium-01.png" alt="Logo">
+            </a>
+        </div>
+        <div class="menu_mobile">
+            <a href="./distributors.html">Distributors</a>
+        </div>
+        <!-- Menu Items -->
+        <div class="menu">
+            <a href="./index.html">Home</a>
+            <a href="#section2">About</a>
+            <a href="#section3">Our Product</a>
+            <a href="#section_article">Articles</a>
+            <a href="./distributors.html">Distributors</a>
+            <a href="#footer" style="background-color: #2e9c5b; color: white;
+            padding: 0.1vw 0.5vw;
+            border-radius: 1vw;
+            text-align: center;
+            text-transform: uppercase;">Contact</a>
+        </div>
+    </nav>
+    <!-- Section 1: Image Right, Text Left -->
+    <section id="section1" class="section text-left">
+        <div class="image-content">
+            <img draggable="false" src="assets/Selsium/1/pro.png" alt="Selsium Shampoo">
+        </div>
+        <div class="text-content" style="direction: rtl;">
+            <div class="line1"><img draggable="false" src="assets/Selsium/Selsium-01.png" alt="logo"></div>
+            <div style="display: flex;flex-direction: row;align-items: center;">
+                <div style="display: flex;flex-direction: column;">
+                    <div class="line3">شامبو للقشرة</div>
+                    <div class="line6">ينصح به الأطباء</div>
+                </div>
+                <div class="line4">1</div>
+                <div class="line2">رقم</div>
+            </div>
+            <!-- <div class="line5">Selenium sulfuide 1%</div> -->
+        </div>
+
+    </section>
+
+    <!-- Section 2: Image Left, Text Right -->
+    <section id="section2" class="section">
+        <div class="image-content">
+            <div class="comparison-container" id="hover-slider">
+                <!-- Before Image -->
+                <div class="image-before">
+                    <img src="./assets/Selsium/4/1.png" alt="Before">
+                </div>
+
+                <!-- After Image -->
+                <div class="image-after">
+                    <img src="./assets/Selsium/4/2.png" alt="After">
+                </div>
+
+                <!-- Slider Line -->
+                <div class="slider-line"></div>
+            </div>
+        </div>
+
+
+        <script>
+            const container = document.getElementById('hover-slider');
+            const imageAfter = container.querySelector('.image-after');
+            const sliderLine = container.querySelector('.slider-line');
+
+            container.addEventListener('mousemove', (e) => {
+                const containerWidth = container.offsetWidth;
+                const offsetX = e.offsetX; // Mouse position relative to the container
+                const percentage = (offsetX / containerWidth) * 100; // Calculate percentage
+                imageAfter.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+                sliderLine.style.left = `${percentage}%`;
+            });
+        </script>
+
+
+        <div class="text-content-reg">
+            <h2>
+                Why use selsium ?
+            </h2>
+            <p>- Treats dandruff and itchy scalp. </p>
+            <p>- Contains selenium sulfide to fight fungi and treat scalp inflamation.</p>
+            <p>- Contains aloe vera to hydrate dry hair and repair damage</p>
+        </div>
+
+    </section>
+
+    <!-- Section 3: Full-Width Image -->
+    <section id="section3" class="section">
+        <img draggable="false" src="assets/Selsium/3/pro & text.png" alt="Dandruff Causes" class="full-width-image">
+    </section>
+
+    <!-- Section 4: Image Left, Text Right -->
+    <section id="section_article" class="section section4">
+        <h1>Articles: Understanding Dandruff</h1>
+        <div class="carousel">
+            <div class="carousel-track">
+                <!-- Article 1 -->
+                <div class="carousel-item">
+                    <div class="image-content">
+                        <img draggable="false" src="assets/Selsium/4/1.png" alt="Understanding Dandruff">
+                    </div>
+                    <div class="text-content-sec4" style="text-align: justify;">
+                        <p style="color: #fff;">Dandruff is a common scalp condition that causes the shedding of dead
+                            skin cells
+                            from the scalp, often resulting in visible white or yellow flakes in your hair. It can be
+                            accompanied by itching and irritation, making it an uncomfortable and sometimes embarrassing
+                            issue to deal with. Understanding the causes of dandruff is the first step to finding the
+                            right
+                            solution for this condition.</p>
+                    </div>
+                </div>
+                <!-- Article 2 -->
+                <div class="carousel-item">
+                    <div class="image-content">
+                        <img draggable="false" src="assets/Selsium/4/2.png" alt="Treating Dandruff">
+                    </div>
+                    <div class="text-content-sec4" style="text-align: justify;">
+                        <p style="color: #fff;">Treating dandruff involves using shampoos containing active ingredients
+                            like
+                            selenium sulfide or zinc pyrithione. Regular cleansing and moisturizing your scalp can also
+                            help
+                            prevent the buildup of skin cells and alleviate symptoms.</p>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="carousel-item">
+                    <div class="image-content">
+                        <img draggable="false" src="assets/Selsium/4/3.png" alt="Treating Dandruff">
+                    </div>
+                    <div class="text-content-sec4" style="text-align: justify;">
+                        <p style="color: #fff;">Choosing the right anti-dandruff shampoo can make a significant
+                            difference in managing and preventing dandruff. With so many options available, it’s
+                            important to select a product that effectively addresses your specific scalp needs.choose
+                            shampoo contine Selenium Sulfide: Reduces the production of skin cells and fights fungal
+                            growth, often used for more severe dandruff.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Arrows for navigation -->
+            <button class="carousel-button left">&lt;</button>
+            <button class="carousel-button right">&gt;</button>
+        </div>
+        <!-- Dots for navigation -->
+        <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const items = Array.from(track.children);
+        const nextButton = document.querySelector('.carousel-button.right');
+        const prevButton = document.querySelector('.carousel-button.left');
+        const dotsNav = document.querySelector('.carousel-dots');
+        const dots = Array.from(dotsNav.children);
+
+        let currentIndex = 0;
+
+        function updateCarousel(index) {
+            const itemWidth = items[0].getBoundingClientRect().width;
+            track.style.transform = `translateX(-${itemWidth * index}px)`;
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % items.length;
+            updateCarousel(currentIndex);
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            updateCarousel(currentIndex);
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel(currentIndex);
+            });
+        });
+    </script>
+
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="left-column">
+            <img draggable="false" src="assets/Selsium/Selsium-01.png" alt="">
+            <p>Selsium - An effective treatment for dandruff and itching.
+                It cleanses, hydrates, and leaves hair soft.</p>
+        </div>
+        <div class="right-column">
+            <div class="social">
+                <img draggable="false" src="./assets/Selsium/location.png">
+                <!-- <span style="color: #202a71;">4Asmaa Fahmy, Ard El Golf, Heliopolis, Pharma Plaza Build Cairo, Egypt</span> -->
+                <span style="color: #202a71;">Northside House, Mount Pleasant, Barnet, Herts, United Kingdom, EN5
+                    9EE</span>
+
+            </div>
+            <div class="social">
+                <img draggable="false" src="./assets/Selsium/phone.png">
+                <span style="color: #202a71;">01222347852</span>
+            </div>
+            <div class="social">
+                <img draggable="false" src="./assets/Selsium/mail.png">
+                <span style="color: #202a71;">info@selsium.com</span>
+            </div>
+            <div class="social">
+                <img draggable="false" src="./assets/Selsium/fb.png">
+                <a href="https://www.facebook.com/profile.php?id=61566365698723 ">
+                    <span style="color: #202a71;">Selsium</span></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
