@@ -21,10 +21,11 @@
 
         .section {
             display: flex;
-            align-items: center;
+            /* align-items: center; */
             justify-content: space-between;
             padding: 0px 10%;
             flex-wrap: wrap;
+            /* flex-direction: row-reverse; */
         }
 
         .section img {
@@ -52,7 +53,7 @@
         }
 
         #section2 {
-            background-image: url(assets/Selsium/2/sh.png);
+            background-image: url(assets/Selsium_ar/2/sh.png);
             background-size: 100%;
             background-repeat: no-repeat;
             background-position: bottom;
@@ -60,7 +61,11 @@
         }
 
         #section2 h2 {
-            font-family: 'Helveticaneue';
+            font-family: 'HelveticaNeueLT';
+        }
+
+        #section2 {
+            direction: rtl;
         }
 
         #section2 p {
@@ -73,6 +78,12 @@
             border-radius: 0;
         }
 
+        .section4 {
+            background-color: #202a70;
+            place-content: center;
+            text-align: center;
+        }
+
         .section4 img {
             max-width: 60%;
             height: auto;
@@ -81,12 +92,15 @@
         }
 
         .section4 h1 {
-            font-family: 'bebasneue';
+            font-family: 'HelveticaNeueLT';
+            color: #2e9c5b;
+            display: block;
+            font-size: 3.5vw;
 
         }
 
         .section4 p {
-            font-family: 'Helveticaneue';
+            font-family: 'HelveticaNeueLT';
             margin-right: 60px;
         }
 
@@ -94,15 +108,29 @@
             margin-left: 60px;
         }
 
+        .section4 .carousel {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .section4 h2 {
+            color: white;
+            margin: 20px 0px;
+            margin-left: auto;
+            font-size: 3vw;
+            display: block;
+        }
+
         .text-content-reg {
             flex: 1;
             margin-bottom: auto;
             margin-left: -6vw;
-            font-family: 'bebas', sans-serif;
+            font-family: 'HelveticaNeueLT';
         }
 
         .text-content-sec4 {
-            font-family: 'Helveticaneue';
+            font-family: 'HelveticaNeueLT';
             flex: 1;
             margin-bottom: auto;
             margin-left: 6vw;
@@ -325,24 +353,7 @@
             background-size: cover;
         }
 
-        .section4 {
-            background-color: #202a70;
-            place-content: center;
-            text-align: center;
-        }
 
-        .section4 .carousel {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-
-        .section4 h1 {
-            color: white;
-            margin: 20px 0px;
-            margin-right: auto;
-            font-size: 3vw;
-        }
 
         .carousel {
             position: relative;
@@ -707,12 +718,12 @@
             <div class="comparison-container" id="hover-slider">
                 <!-- Before Image -->
                 <div class="image-before">
-                    <img src="./assets/Selsium/4/1.png" alt="Before">
+                    <img src="./assets/Selsium/2/A.png" alt="Before">
                 </div>
 
                 <!-- After Image -->
                 <div class="image-after">
-                    <img src="./assets/Selsium/4/2.png" alt="After">
+                    <img src="./assets/Selsium/2/B.png" alt="After">
                 </div>
 
                 <!-- Slider Line -->
@@ -738,7 +749,7 @@
 
         <div class="text-content-reg">
             <h2>
-                Why use selsium ?
+                ليه تستخدم سلسيوم؟
             </h2>
             <p>- Treats dandruff and itchy scalp. </p>
             <p>- Contains selenium sulfide to fight fungi and treat scalp inflamation.</p>
@@ -749,15 +760,21 @@
 
     <!-- Section 3: Full-Width Image -->
     <section id="section3" class="section">
-        <img draggable="false" src="assets/Selsium/3/pro & text.png" alt="Dandruff Causes" class="full-width-image">
+        <img draggable="false" src="assets/Selsium_ar/3/pro & text.png" alt="Dandruff Causes" class="full-width-image">
     </section>
 
     <!-- Section 4: Image Left, Text Right -->
     <section id="section_article" class="section section4">
-        <h1>Articles: Understanding Dandruff</h1>
+        <div>
+            <h1>المقالات</h1>
+            <h2>أسباب القشرة</h2>
+        </div>
+
+
         <div class="carousel">
             <div class="carousel-track">
                 <!-- Article 1 -->
+
                 <div class="carousel-item">
                     <div class="image-content">
                         <img draggable="false" src="assets/Selsium/4/1.png" alt="Understanding Dandruff">
