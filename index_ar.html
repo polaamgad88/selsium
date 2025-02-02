@@ -21,11 +21,8 @@
 
         .section {
             display: flex;
-            /* align-items: center; */
-            justify-content: space-between;
             padding: 0px 10%;
             flex-wrap: wrap;
-            /* flex-direction: row-reverse; */
         }
 
         .section img {
@@ -81,7 +78,7 @@
         .section4 {
             background-color: #202a70;
             place-content: center;
-            text-align: center;
+            /* stext-align: center; */
         }
 
         .section4 img {
@@ -101,11 +98,11 @@
 
         .section4 p {
             font-family: 'HelveticaNeueLT';
-            margin-right: 60px;
+            margin-right: 4vw;
         }
 
         .section4 img {
-            margin-left: 60px;
+            margin-left: 4vw;
         }
 
         .section4 .carousel {
@@ -117,7 +114,7 @@
         .section4 h2 {
             color: white;
             margin: 20px 0px;
-            margin-left: auto;
+            /* margin-left: auto; */
             font-size: 3vw;
             display: block;
         }
@@ -132,8 +129,8 @@
         .text-content-sec4 {
             font-family: 'HelveticaNeueLT';
             flex: 1;
-            margin-bottom: auto;
-            margin-left: 6vw;
+            margin-right: -6vw;
+            margin-left: 4vw;
         }
 
         .text-content {
@@ -223,6 +220,7 @@
 
         .image-content {
             flex: 1;
+            max-width: 40vw;
         }
 
         .full-width-image {
@@ -369,6 +367,7 @@
 
         .carousel-item {
             /* margin: 50px; */
+            direction: rtl;
             min-width: 100%;
             display: flex;
             flex-direction: row;
@@ -378,7 +377,7 @@
         }
 
         .carousel-item img {
-            max-width: 100%;
+            max-width: 90%;
             height: auto;
             border-radius: 8px;
         }
@@ -397,12 +396,12 @@
         }
 
         .carousel-button.left {
-            left: 10px;
+            left: 0px;
             color: white;
         }
 
         .carousel-button.right {
-            right: 10px;
+            right: 0px;
         }
 
         .carousel-dots {
@@ -765,19 +764,19 @@
 
     <!-- Section 4: Image Left, Text Right -->
     <section id="section_article" class="section section4">
-        <div>
-            <h1>المقالات</h1>
-            <h2>أسباب القشرة</h2>
-        </div>
-
+        <h1 style="direction: rtl;">المقالات</h1>
 
         <div class="carousel">
+
             <div class="carousel-track">
                 <!-- Article 1 -->
 
                 <div class="carousel-item">
-                    <div class="image-content">
-                        <img draggable="false" src="assets/Selsium/4/1.png" alt="Understanding Dandruff">
+                    <div style="display: flex;flex-direction: column;margin-right: 4vw;">
+                        <h2>أسباب القشرة</h2>
+                        <div class="image-content">
+                            <img draggable="false" src="assets/Selsium/4/1.png" alt="Understanding Dandruff">
+                        </div>
                     </div>
                     <div class="text-content-sec4" style="text-align: justify;">
                         <p style="color: #fff;">Dandruff is a common scalp condition that causes the shedding of dead
@@ -791,9 +790,13 @@
                 </div>
                 <!-- Article 2 -->
                 <div class="carousel-item">
-                    <div class="image-content">
-                        <img draggable="false" src="assets/Selsium/4/2.png" alt="Treating Dandruff">
+                    <div style="display: flex;flex-direction: column;margin-right: 4vw;">
+                        <h2>أسباب القشرة</h2>
+                        <div class="image-content">
+                            <img draggable="false" src="assets/Selsium/4/2.png" alt="Understanding Dandruff">
+                        </div>
                     </div>
+
                     <div class="text-content-sec4" style="text-align: justify;">
                         <p style="color: #fff;">Treating dandruff involves using shampoos containing active ingredients
                             like
@@ -805,8 +808,11 @@
 
                 <!-- Article 3 -->
                 <div class="carousel-item">
-                    <div class="image-content">
-                        <img draggable="false" src="assets/Selsium/4/3.png" alt="Treating Dandruff">
+                    <div style="display: flex;flex-direction: column;margin-right: 4vw;">
+                        <h2>أسباب القشرة</h2>
+                        <div class="image-content">
+                            <img draggable="false" src="assets/Selsium/4/3.png" alt="Understanding Dandruff">
+                        </div>
                     </div>
                     <div class="text-content-sec4" style="text-align: justify;">
                         <p style="color: #fff;">Choosing the right anti-dandruff shampoo can make a significant
@@ -889,7 +895,7 @@
                 <span style="color: #202a71;">info@selsium.com</span>
             </div>
             <div class="social">
-                <img draggable="false" src="./assets/Selsium/fb.png">
+                <img draggable="false" src="./assets/Selsium/fb_green.png">
                 <a href="https://www.facebook.com/profile.php?id=61566365698723 ">
                     <span style="color: #202a71;">Selsium</span></a>
             </div>
