@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selsium</title>
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" sizes="64x64">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'bebas', sans-serif;
+            line-height: 1.6;
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 10%;
+            flex-wrap: wrap;
+        }
+
+        .section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .section h2 {
+            color: #2e9c5b;
+            font-size: 3.5vw;
+            font-weight: bolder;
+            padding-bottom: 3vw;
+        }
+
+        .section p {
+            font-size: 1.7vw;
+            margin-top: 10px;
+            color: #202a70;
+            font-weight: bold;
+        }
+
+        .section.text-left {
+            flex-direction: row-reverse;
+        }
+
+        #section2 {
+            background-image: url(assets/Selsium/2/sh.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: bottom;
+
+        }
+
+        #section2 h2 {
+            font-family: 'Helveticaneue';
+        }
+
+        #section2 p {
+            font-family: Helvetica;
+        }
+
+        #section2 img {
+            max-width: 75%;
+            height: auto;
+            border-radius: 0;
+        }
+
+        .section4 img {
+            max-width: 60%;
+            height: auto;
+            border-radius: 0;
+            margin-bottom: 4vw;
+        }
+
+        .section4 h1 {
+            font-family: 'bebasneue';
+
+        }
+
+        .section4 p {
+            font-family: 'Helveticaneue';
+            margin-right: 60px;
+        }
+
+        .section4 img {
+            margin-left: 60px;
+        }
+
+        .text-content-reg {
+            flex: 1;
+            margin-bottom: auto;
+            margin-left: -6vw;
+            font-family: 'bebas', sans-serif;
+        }
+
+        .text-content-sec4 {
+            font-family: 'Helveticaneue';
+            flex: 1;
+            margin-bottom: auto;
+            margin-left: 6vw;
+        }
+
+        .text-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            padding: 1.7vw;
+            border-radius: 0.7vw;
+            max-width: fit-content;
+            margin: auto;
+        }
+
+        .line1,
+        .line2,
+        .line3,
+        .line4,
+        .line5,
+        .line6 {
+            margin: -0.5vw 0;
+        }
+
+
+        .line1 {
+            font-family: 'bebas', sans-serif;
+            font-size: 5vw;
+            font-weight: bolder;
+            text-transform: uppercase;
+        }
+
+        .line1 img {
+            width: 20vw;
+            height: auto;
+        }
+
+
+        .line2 {
+            font-family: 'bebas', sans-serif;
+            font-size: 2vw;
+            width: 100%;
+            text-align: center;
+            font-weight: bolder;
+            color: #202a70;
+            text-transform: uppercase;
+        }
+
+        .line3 {
+            font-family: 'Helveticaneue', monospace;
+            font-size: 2.2vw;
+            font-weight: 900;
+            width: 100%;
+            text-align: center;
+            color: #2e9c5b;
+            text-transform: uppercase;
+        }
+
+        .line4 {
+            font-family: 'bebas', sans-serif;
+            font-size: 8.3vw;
+            width: 100%;
+            color: #202a70;
+            font-stretch: ultra-expanded;
+            text-align: center;
+            text-transform: uppercase;
+            transform: scaleY(2.2);
+            padding: 1.8vw;
+            padding-top: 1vw;
+            font-weight: bolder;
+        }
+
+        .line5 {
+            font-family: 'bebas', sans-serif;
+            font-size: 1.5vw;
+            text-transform: uppercase;
+            color: #202a70;
+            font-weight: bolder;
+            margin: 0
+        }
+
+        .line6 {
+            font-family: 'bebas', sans-serif;
+            font-size: 1.2vw;
+            background-color: #2e9c5b;
+            color: white;
+            padding: 0.3vw 0.6vw;
+            border-radius: 1vw;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .image-content {
+            flex: 1;
+        }
+
+        .full-width-image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 5%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 14vw;
+            height: auto;
+        }
+
+
+        .menu {
+            display: flex;
+            gap: 20px;
+
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #34498cff;
+            font-weight: 500;
+            font-size: 1.5vw;
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: #007bff;
+        }
+
+        .menu_mobile {
+            display: none;
+            color: #34498cff;
+            gap: 20px;
+        }
+
+        .menu_mobile a {
+            text-decoration: none;
+            color: #34498cff;
+            font-weight: 500;
+            font-size: 2vw;
+            transition: color 0.3s ease;
+        }
+
+        .menu_mobile a:hover {
+            color: #007bff;
+        }
+
+        #footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 1vw;
+            margin: 4vw;
+            margin-left: 10vw;
+            background-color: white;
+        }
+
+        #footer img {
+
+            width: 20vw;
+            height: auto;
+
+        }
+
+        #footer a {
+            text-decoration: none;
+            color: #202a70;
+        }
+
+        #footer .left-column {
+            max-width: 46vw;
+            flex: 1;
+            font-size: 1.7vw;
+            font-weight: bold;
+            font-family: 'bebas';
+            padding-right: 10vw;
+            color: #202a70;
+        }
+
+        #footer .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+        }
+
+        #footer .social {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.3vw;
+        }
+
+        #footer .social img {
+            width: 60px;
+            height: 60px;
+        }
+
+        #footer .social span {
+            /* border-bottom: 1px solid #ccc; */
+            flex: 1;
+        }
+
+        #section1 {
+            background: url(assets/Selsium/1/BG.png);
+            background-size: cover;
+        }
+
+        .section4 {
+            background-color: #202a70;
+            place-content: center;
+            text-align: center;
+        }
+
+        .section4 .carousel {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .section4 h1 {
+            color: white;
+            margin: 20px 0px;
+            margin-right: auto;
+            font-size: 3vw;
+        }
+
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            margin: auto;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            /* margin: 50px; */
+            min-width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            text-align: justify;
+        }
+
+        .carousel-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .carousel-button {
+            position: absolute;
+
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            z-index: 2;
+            border-radius: 50%;
+        }
+
+        .carousel-button.left {
+            left: 10px;
+            color: white;
+        }
+
+        .carousel-button.right {
+            right: 10px;
+        }
+
+        .carousel-dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 5px;
+            background: white;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background: #2e9c5b;
+        }
+
+        /* Responsive Menu for Small Screens */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 60vw;
+            }
+
+            .section {
+                padding: 0px 5%;
+            }
+
+            .menu_mobile {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .menu_mobile a {
+                font-size: 3.3vw;
+            }
+
+            .menu {
+                display: none;
+                /* Hide menu on smaller screens */
+            }
+
+            .logo img {
+                width: 32vw;
+            }
+
+            #footer img {
+                width: 32vw;
+            }
+
+            #footer .left-column {
+                font-size: 5vw;
+                padding-right: 0;
+                margin-bottom: 3vw;
+            }
+
+            #footer .social {
+                font-size: 4.5vw;
+            }
+
+            nav {
+                place-content: center;
+                flex-direction: column;
+            }
+
+            #section1 {
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            #section1 img {
+                margin-left: -4vw;
+            }
+
+            .line1 img {
+                display: none;
+            }
+
+            #section2 .image-content {
+                text-align-last: center;
+            }
+
+            #section2 {
+                background-position: center;
+            }
+
+            .text-content-reg {
+                margin-left: 0;
+            }
+
+            .section4 img {
+                margin: 0;
+            }
+
+            .section4 p {
+                margin: 0;
+            }
+
+            footer {
+                flex-direction: column;
+
+            }
+
+            #footer {
+                margin-left: 0;
+                padding: 0;
+                margin: 4vw;
+            }
+
+            #footer .social img {
+                width: 10vw;
+                height: auto;
+            }
+
+
+            #footer .left-column {
+                max-width: max-content;
+            }
+
+            #section1,
+            #section2 {
+                flex-direction: column;
+            }
+
+            .section h2 {
+                font-size: 6vw;
+
+            }
+
+            .section4 p {
+                font-size: 3.5vw;
+            }
+
+            #section2 p {
+                font-size: 4vw;
+            }
+
+            /* .section4 div {
+                flex-direction: column;
+            } */
+
+            .section4 {
+                padding-bottom: 5%;
+            }
+
+            .section4 h1 {
+                margin-right: 0;
+                font-size: 4vw;
+                padding: 0;
+            }
+
+            .text-content-sec4 {
+                margin-left: 0;
+            }
+
+            .line2 {
+                font-size: 9vw;
+                margin: -2.5vw 0;
+            }
+
+            .line3 {
+                font-size: 10vw;
+                margin: -1.5vw 0;
+            }
+
+            .line4 {
+                font-size: 37vw;
+                transform: scaleY(2.2);
+                padding: 5vw;
+                padding-top: 2vw;
+            }
+
+            .line5 {
+                font-size: 6.5vw;
+            }
+
+            .line6 {
+                font-size: 5.5vw;
+            }
+
+            .carousel-item {
+                flex-direction: column;
+            }
+        }
+
+        @font-face {
+            font-family: bebas;
+            src: url('./assets/Bebas-Regular.ttf');
+        }
+
+        @font-face {
+            font-family: bebasneue;
+            src: url('./assets/BEBASNEUE-REGULAR.TTF');
+        }
+
+        @font-face {
+            font-family: Helveticaneue;
+            src: url('./assets/HELVETICANEUE.TTF');
+
+
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 2.5vw;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            width: 60vw;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            h1 {
+                text-align: center;
+                padding: 20px 0;
+                font-size: 6vw;
+            }
+
+            .card {
+                width: 85vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <!-- Logo Holder -->
+        <div class="logo">
+            <a href="./index.html">
+                <img draggable="false" src="assets/Selsium/Selsium-01.png" alt="Logo">
+            </a>
+        </div>
+
+        <div class="menu_mobile">
+            <a href="./distributors_ar.html">الموردين</a>
+            <a href="./distributors.html">EN</a>
+        </div>
+        <!-- Menu Items -->
+        <div class="menu">
+            <a href="./index_ar.html">الرئيسية</a>
+            <a href="#section2">معلومات عنا</a>
+            <a href="#section3">المكونات</a>
+            <a href="#section_article">المقالات</a>
+            <a href="./distributors_ar.html">الموردين</a>
+            <a href="./distributors.html">EN</a>
+            <a href="#footer" style="background-color: #2e9c5b; color: white;
+            padding: 0.1vw 0.5vw;
+            border-radius: 1vw;
+            text-align: center;
+            text-transform: uppercase;">تواصل معنا</a>
+        </div>
+    </nav>
+    <h1>الموردين</h1>
+
+    <!-- style="text-align: center; padding: 20px 0; color: #333; font-size: 2.4vw;" -->
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px;">
+        <!-- Distributor 1 -->
+        <div class="card">
+            <img src="./assets/GEM Group 2024.jpg" alt="Distributor 1"
+                style="width: 100%; height: 300px; object-fit: cover;">
+            <div style="padding: 15px;">
+                <h3 style="margin: 0; font-size: 30px; color: #333;">GEM EGYPT</h3>
+                <p style="margin: 8px 0; color: #34488c; font-size: 24px;"> <a href="mailto:info@gemegypt.com"
+                        style="color: #34488c; text-decoration: none;">info@gemegypt.com</a></p>
+                <p style="margin: 8px 0; color: #34488c; font-size: 24px;">+20 1222347852 </p>
+
+                <p style="margin: 8px 0; color: #34488c; font-size: 24px;"> 4 Asmaa Fahmy, Ard El Golf, Heliopolis,
+                    Pharma Plaza Build Cairo, Egypt</p>
+
+            </div>
+        </div>
+
+
+
+        <!-- Footer -->
+        <footer id="footer">
+            <hr>
+            <div class="left-column">
+
+                <img draggable="false" src="assets/Selsium/Selsium-01.png" alt="">
+                <p>Selsium - An effective treatment for dandruff and itching.
+                    It cleanses, hydrates, and leaves hair soft.</p>
+            </div>
+            <div class="right-column">
+                <div class="social">
+                    <img draggable="false" src="./assets/Selsium/location.png">
+                    <!-- <span style="color: #202a71;">4Asmaa Fahmy, Ard El Golf, Heliopolis, Pharma Plaza Build Cairo, Egypt</span> -->
+                    <span style="color: #202a71;">Northside House, Mount Pleasant, Barnet, Herts, United Kingdom, EN5
+                        9EE</span>
+
+                </div>
+                <div class="social">
+                    <img draggable="false" src="./assets/Selsium/phone.png">
+                    <span style="color: #202a71;">01222347852</span>
+                </div>
+                <div class="social">
+                    <img draggable="false" src="./assets/Selsium/mail.png">
+                    <span style="color: #202a71;">info@selsium.com</span>
+                </div>
+                <div class="social">
+                    <img draggable="false" src="./assets/Selsium/fb_green.png">
+                    <a href="https://www.facebook.com/profile.php?id=61566365698723 ">
+                        <span style="color: #202a71;">Selsium</span></a>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>
